@@ -45,4 +45,4 @@ landing-page/
 
 ---
 
-© 2024 Modern Responsive Landing Page 
+© 2025 Modern Responsive Landing Page 
