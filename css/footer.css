@@ -1,7 +1,7 @@
 /* footer.css - Footer Styles */
 
 footer {
-    background: var(--black);
+    background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
     color: var(--white);
     padding: var(--space-lg) 0 var(--space-md) 0;
     text-align: center;
