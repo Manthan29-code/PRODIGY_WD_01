@@ -1,0 +1,246 @@
+/* styles.css - Base Styles */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;800&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Color Variables */
+    --primary: #2d6cdf;
+    --secondary: #f5a623;
+    --accent: #23cba7;
+    --neutral-bg: #f9f9f9;
+    --neutral-text: #222;
+    --white: #fff;
+    --black: #111;
+    --card-bg: #fff;
+    --card-shadow: 0 4px 32px rgba(45, 108, 223, 0.12);
+    --card-shadow-accent: 0 4px 32px rgba(35, 203, 167, 0.15);
+    --card-shadow-secondary: 0 4px 32px rgba(245, 166, 35, 0.12);
+    /* Typography */
+    --font-main: 'Inter', Arial, sans-serif;
+    --font-accent: 'Montserrat', Arial, sans-serif;
+    --font-alt: 'Roboto', Arial, sans-serif;
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    /* Responsive Grid */
+    --max-width: 1200px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--neutral-text);
+    background: var(--neutral-bg);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-accent);
+    font-weight: 700;
+    color: var(--black);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+/* Responsive Typography */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Base Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
+}
+.col {
+    flex: 1 1 0;
+    min-width: 220px;
+    padding: var(--space-md);
+    background: none;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Card Design for About, Services, Testimonials, Contact */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    padding: var(--space-lg) var(--space-md);
+    margin-bottom: var(--space-lg);
+    transition: box-shadow 0.3s;
+}
+.card-accent {
+    box-shadow: var(--card-shadow-accent);
+}
+.card-secondary {
+    box-shadow: var(--card-shadow-secondary);
+}
+.card h3 {
+    font-family: var(--font-alt);
+    color: var(--accent);
+    margin-bottom: var(--space-sm);
+}
+
+blockquote {
+    font-style: italic;
+    background: var(--neutral-bg);
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin: 0;
+    color: var(--black);
+}
+blockquote span {
+    display: block;
+    margin-top: var(--space-xs);
+    font-size: 0.95em;
+    color: var(--primary);
+}
+
+section {
+    padding: var(--space-xl) 0;
+    margin-bottom: var(--space-xl);
+}
+section h2 {
+    margin-bottom: var(--space-md);
+    color: var(--primary);
+    font-family: var(--font-accent);
+    font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+    section {
+        padding: var(--space-lg) 0;
+    }
+    .row {
+        gap: var(--space-md);
+    }
+}
+@media (max-width: 768px) {
+    section {
+        padding: var(--space-md) var(--space-xs);
+        margin-bottom: var(--space-md);
+    }
+    .row {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    .col {
+        margin-bottom: var(--space-sm);
+    }
+    .card {
+        padding: var(--space-md) var(--space-sm);
+    }
+}
+
+/* Contact Form Card Inner Shadow */
+.card.contact-card {
+    box-shadow: var(--card-shadow-secondary), inset 0 2px 16px rgba(45,108,223,0.10);
+    padding: var(--space-xl) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-lg);
+}
+
+form.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md) var(--space-lg);
+}
+form.contact-form input,
+form.contact-form textarea {
+    grid-column: span 2;
+}
+form.contact-form input[name="name"],
+form.contact-form input[name="email"] {
+    grid-column: span 1;
+}
+form.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+form.contact-form button[type="submit"] {
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+@media (max-width: 768px) {
+    .card.contact-card {
+        padding: var(--space-md) var(--space-sm);
+    }
+    form.contact-form {
+        grid-template-columns: 1fr;
+    }
+    form.contact-form input,
+    form.contact-form textarea,
+    form.contact-form button[type="submit"] {
+        grid-column: span 1;
+    }
+    form.contact-form button[type="submit"] {
+        justify-self: stretch;
+    }
+}
+
+/* Hero Headline Color */
+.hero-headline {
+    color: #F0F0F0;
+}
+
+/* Contact Form Field Height and Rounded Corners */
+form.contact-form input,
+form.contact-form textarea {
+    height: 48px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: var(--space-sm);
+    font-size: 1rem;
+    font-family: var(--font-main);
+}
+form.contact-form textarea {
+    height: auto;
+    min-height: 100px;
+    resize: vertical;
+}
+form.contact-form button[type="submit"] {
+    border-radius: 3px;
+} 

@@ -1,0 +1,60 @@
+/* animations.css - Animation Library */
+
+@keyframes heroTypewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(48px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ctaPulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.text-fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1s, transform 1s;
+}
+.text-fade-in.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide-up {
+    opacity: 0;
+    transform: translateY(48px);
+    transition: opacity 1s, transform 1s;
+}
+.slide-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+.color-transition {
+    transition: color 0.3s, background 0.3s;
+}
+.letter-spacing-hover:hover {
+    letter-spacing: 2px;
+    transition: letter-spacing 0.2s;
+}
+
+/* Button focus/hover */
+.cta-btn:focus {
+    outline: 2px solid var(--primary);
+    background: var(--accent);
+    color: var(--white);
+}
+
+/* Section hover for demo (optional) */
+section:hover {
+    box-shadow: 0 4px 24px rgba(45,108,223,0.08);
+    transition: box-shadow 0.3s;
+} 

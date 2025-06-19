@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Modern Responsive Landing Page">
+    <title>Modern Responsive Landing Page</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav aria-label="Main Navigation">
+        <div class="nav-container container">
+            <a href="#home" class="logo" aria-label="Home">
+                <img src="assets/icons/logo-placeholder.svg" alt="Logo" style="height:32px;width:32px;vertical-align:middle;">
+            </a>
+            <ul class="menu" id="main-menu">
+                <li><a href="#home" class="active" aria-label="Home">Home</a></li>
+                <li><a href="#about" aria-label="About">About</a></li>
+                <li><a href="#features" aria-label="Features">Features</a></li>
+                <li><a href="#services" aria-label="Services">Services</a></li>
+                <li><a href="#testimonials" aria-label="Testimonials">Testimonials</a></li>
+                <li><a href="#contact" aria-label="Contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header id="home">
+        <h1 class="hero-headline text-fade-in">Empower Your Business with a Modern Web Presence</h1>
+        <p class="hero-desc text-fade-in">We craft beautiful, responsive, and high-performing landing pages that convert visitors into customers. Elevate your brand with seamless design and engaging animations.</p>
+        <a href="#contact" class="cta-btn color-transition" aria-label="Get Started">
+            Get Started <i class="fas fa-arrow-right"></i>
+        </a>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="container">
+            <div class="card card-accent slide-up" aria-labelledby="about-title">
+                <h2 id="about-title">About Us</h2>
+                <p style="font-family: var(--font-alt);">We are a team of creative professionals passionate about building modern, user-friendly web experiences. Our mission is to help businesses stand out online with innovative design and technology.</p>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section id="features" class="container">
+            <h2 id="features-title">Features</h2>
+            <div class="row">
+                <div class="col card slide-up">
+                    <i class="fas fa-bolt fa-2x" style="color: var(--primary);"></i>
+                    <h3>Fast &amp; Lightweight</h3>
+                    <p>Optimized for speed and performance, ensuring quick load times and smooth interactions.</p>
+                </div>
+                <div class="col card card-accent slide-up">
+                    <i class="fas fa-mobile-alt fa-2x" style="color: var(--accent);"></i>
+                    <h3>Mobile First</h3>
+                    <p>Designed to look stunning on all devices, from smartphones to desktops.</p>
+                </div>
+                <div class="col card card-secondary slide-up">
+                    <i class="fas fa-lock fa-2x" style="color: var(--secondary);"></i>
+                    <h3>Secure</h3>
+                    <p>Built with best practices for security and privacy in mind.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section id="services" class="container">
+            <div class="card card-secondary slide-up" aria-labelledby="services-title">
+                <h2 id="services-title">Our Services</h2>
+                <div class="row">
+                    <div class="col">
+                        <h3>Custom Landing Pages</h3>
+                        <p>Tailored solutions to match your brand and business goals.</p>
+                    </div>
+                    <div class="col">
+                        <h3>UI/UX Design</h3>
+                        <p>Modern, intuitive interfaces that delight users and drive engagement.</p>
+                    </div>
+                    <div class="col">
+                        <h3>SEO Optimization</h3>
+                        <p>Boost your visibility and reach with search engine friendly design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="container">
+            <div class="card card-accent slide-up" aria-labelledby="testimonials-title">
+                <h2 id="testimonials-title">What Our Clients Say</h2>
+                <div class="row">
+                    <div class="col">
+                        <blockquote>“The landing page exceeded our expectations. Our conversions increased by 40%!”<br><span>- Alex, Startup Founder</span></blockquote>
+                    </div>
+                    <div class="col">
+                        <blockquote>“Beautiful design, smooth animations, and great support. Highly recommended!”<br><span>- Priya, Marketing Lead</span></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <div class="card card-secondary contact-card slide-up" aria-labelledby="contact-title">
+                <h2 id="contact-title">Contact Us</h2>
+                <form class="contact-form" aria-label="Contact form">
+                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" style="font-family: var(--font-main);">
+                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" style="font-family: var(--font-main);">
+                    <textarea name="message" placeholder="Your Message" required aria-label="Your Message" style="font-family: var(--font-main);"></textarea>
+                    <button type="submit" class="cta-btn color-transition" aria-label="Send Message" style="font-family: var(--font-accent);">Send Message <i class="fas fa-envelope"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="footer-info">
+            &copy; 2024 Modern Responsive Landing Page. All rights reserved.
+        </div>
+    </footer>
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/scroll-effects.js"></script>
+</body>
+</html> 
